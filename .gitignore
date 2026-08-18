@@ -1,4 +1,7 @@
-# Compiled files
+# Build directories
+build/
+
+# Object files
 *.o
 
 # Executables
