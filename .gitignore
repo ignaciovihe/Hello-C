@@ -1,3 +1,6 @@
+# VS Code
+.vscode/
+
 # Build directories
 build/
 
@@ -6,3 +9,4 @@ build/
 
 # Executables
 concat_strings
+smart_append
