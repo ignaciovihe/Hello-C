@@ -1,17 +1,18 @@
 #!/bin/bash
 
 PROJECT_NAME=$1
+MODULE_NAME=$2
 
-if [ -z "$PROJECT_NAME" ]; then
-    echo "Usage: $0 <project-name>"
+if [ -z "$PROJECT_NAME" ] || [ -z "$MODULE_NAME" ]; then
+    echo "Usage: $0 <project-name> <module-name>"
     exit 1
 fi
 
 mkdir -p "$PROJECT_NAME/src" "$PROJECT_NAME/include" "$PROJECT_NAME/build"
 
 touch "$PROJECT_NAME/src/main.c" \
-      "$PROJECT_NAME/src/exercise.c" \
-      "$PROJECT_NAME/include/exercise.h" \
+      "$PROJECT_NAME/src/$MODULE_NAME.c" \
+      "$PROJECT_NAME/include/$MODULE_NAME.h" \
       "$PROJECT_NAME/Makefile"
 
 TARGET_NAME="${PROJECT_NAME//-/_}"
@@ -21,16 +22,16 @@ CC = gcc
 CFLAGS = -Iinclude
 TARGET = $TARGET_NAME
 
-OBJS = build/main.o build/exercise.o
+OBJS = build/main.o build/$MODULE_NAME.o
 
 \$(TARGET): \$(OBJS)
 	\$(CC) \$(OBJS) -o \$(TARGET)
 
-build/main.o: src/main.c include/exercise.h
+build/main.o: src/main.c include/$MODULE_NAME.h
 	\$(CC) \$(CFLAGS) -c src/main.c -o build/main.o
 
-build/exercise.o: src/exercise.c include/exercise.h
-	\$(CC) \$(CFLAGS) -c src/exercise.c -o build/exercise.o
+build/$MODULE_NAME.o: src/$MODULE_NAME.c include/$MODULE_NAME.h
+	\$(CC) \$(CFLAGS) -c src/$MODULE_NAME.c -o build/$MODULE_NAME.o
 
 .PHONY: clean
 clean:
