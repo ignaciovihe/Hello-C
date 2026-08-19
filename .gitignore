@@ -10,3 +10,4 @@ build/
 # Executables
 concat_strings
 smart_append
+forward_declarations

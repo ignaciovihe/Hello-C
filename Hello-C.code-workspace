@@ -1,0 +1,17 @@
+{
+    "folders": [
+        {
+            "path": "."
+        },
+        {
+            "path": "concat-strings"
+        },
+        {
+            "path": "smart-append"
+        },
+        {
+            "path": "forward-declarations"
+        }
+    ],
+    "settings": {}
+}
