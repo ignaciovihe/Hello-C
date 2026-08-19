@@ -11,6 +11,9 @@
         },
         {
             "path": "forward-declarations"
+        },
+        {
+            "path": "http-switch"
         }
     ],
     "settings": {}
