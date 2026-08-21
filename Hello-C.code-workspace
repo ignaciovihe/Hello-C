@@ -14,6 +14,9 @@
         },
         {
             "path": "http-switch"
+        },
+        {
+            "path": "helper-fields"
         }
     ],
     "settings": {}
