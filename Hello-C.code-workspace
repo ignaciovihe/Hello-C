@@ -17,6 +17,9 @@
         },
         {
             "path": "helper-fields"
+        },
+        {
+            "path": "array-of-pointers"
         }
     ],
     "settings": {}

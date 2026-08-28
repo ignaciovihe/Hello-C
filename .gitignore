@@ -13,3 +13,4 @@ smart_append
 forward_declarations
 http_switch
 helper_fields
+array_of_pointers
