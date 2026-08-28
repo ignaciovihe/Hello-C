@@ -20,6 +20,9 @@
         },
         {
             "path": "array-of-pointers"
+        },
+        {
+            "path": "void-pointers"
         }
     ],
     "settings": {}
