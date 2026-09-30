@@ -17,3 +17,4 @@ array_of_pointers
 void_pointers
 low_level_stack
 snek_objects
+refcounting_gc
