@@ -32,6 +32,9 @@
         },
         {
             "path": "refcounting-gc"
+        },
+        {
+            "path": "mark-and-sweep-gc"
         }
     ],
     "settings": {}
